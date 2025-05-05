@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détecteur d'intrusion</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Alertes de scan réseau</h1>
+  <div id="alertBox"></div>
+
+  <script>
+    async function fetchAlerts() {
+      const res = await fetch("/alerts");
+      const alerts = await res.json();
+      const box = document.getElementById("alertBox");
+      box.innerHTML = alerts.map(a => `<div class="alert">${a}</div>`).join('');
+    }
+
+    setInterval(fetchAlerts, 2000); // Rafraîchit toutes les 2 secondes
+    fetchAlerts();
+  </script>
+</body>
+</html>

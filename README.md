@@ -25,3 +25,7 @@ Avant de commencer, assurez-vous d'avoir installé les dépendances nécessaires
 1. **Installer Scapy** :
    ```bash
    sudo apt-get install python3-scapy
+
+2. **Lancement du projet** :
+   ```bash
+   sudo python ids_web.py

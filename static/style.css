@@ -1,21 +1,43 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #0f0;
-    padding: 20px;
-  }
-  
-  h1 {
-    color: #0ff;
-  }
-  
-  #alertBox {
-    margin-top: 20px;
-  }
-  
-  .alert {
-    padding: 10px;
-    margin: 5px 0;
-    border-bottom: 1px solid #0f0;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #0f0;
+  padding: 20px;
+}
+
+h1 {
+  color: #0ff;
+}
+
+#alertPackages {
+  margin-top: 20px;
+}
+
+.package {
+  margin-bottom: 20px;
+  border: 1px solid #0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.package-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.package-header .toggle-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.package-content {
+  margin-top: 10px;
+}
+
+.alert {
+  padding: 10px;
+  margin: 5px 0;
+  border-bottom: 1px solid #0f0;
+}
